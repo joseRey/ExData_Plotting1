@@ -23,7 +23,7 @@ DT[,datetime:= as.POSIXct(paste(Date, Time), format="%d/%m/%Y %H:%M:%S")]
 ## Plot 4
 png("plot4.png", width=480, height=480)
 
-par(mfrow=c(2,2),mar=c(4,4,2,2),oma=c(0,0,2,0))
+par(mfrow=c(2,2),mar=c(5,4,2,2),oma=c(0,0,2,0))
 
 with(DT, {
   plot(datetime, Global_active_power, type="n",
