@@ -23,7 +23,7 @@ DT[,datetime:= as.POSIXct(paste(Date, Time), format="%d/%m/%Y %H:%M:%S")]
 ## Plot 3
 png("plot3.png", width=480, height=480)
 legendText <- c("Sub_metering_1","Sub_metering_2","Sub_metering_3")
-legendColor <- c("black","blue","red")
+legendColor <- c("black","red","blue")
 with(DT, {
   plot(datetime, Sub_metering_1, type="n",
        xlab="", ylab="Energy sub metering")
@@ -31,5 +31,5 @@ with(DT, {
   lines(datetime, Sub_metering_2, col="red")
   lines(datetime, Sub_metering_3, col="blue")
   legend("topright", lty=1,  col=legendColor,
-         text.col=legendColor, legend=legendText)})
+         legend=legendText)})
 dev.off()

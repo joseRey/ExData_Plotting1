@@ -23,7 +23,7 @@ DT[,datetime:= as.POSIXct(paste(Date, Time), format="%d/%m/%Y %H:%M:%S")]
 ## Plot 4
 png("plot4.png", width=480, height=480)
 
-par(mfrow=c(2,2),mar=c(5,4,2,2),oma=c(0,0,2,0))
+par(mfrow=c(2,2),mar=c(4,4,4,1.5), oma=c(0,0,0,0))
 
 with(DT, {
   plot(datetime, Global_active_power, type="n",
@@ -35,7 +35,7 @@ with(DT, {
   lines(datetime, Voltage)})
 
 legendText <- c("Sub_metering_1","Sub_metering_2","Sub_metering_3")
-legendColor <- c("black","blue","red")
+legendColor <- c("black","red","blue")
 with(DT, {
   plot(datetime, Sub_metering_1, type="n",
        xlab="", ylab="Energy sub metering")
@@ -43,7 +43,7 @@ with(DT, {
   lines(datetime, Sub_metering_2, col="red")
   lines(datetime, Sub_metering_3, col="blue")
   legend("topright", lty=1,  col=legendColor,
-         text.col=legendColor, legend=legendText,
+         legend=legendText,
          bty="n")})
 
 with(DT, {
