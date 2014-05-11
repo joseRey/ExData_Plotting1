@@ -23,7 +23,7 @@ DT[,datetime:= as.POSIXct(paste(Date, Time), format="%d/%m/%Y %H:%M:%S")]
 png("plot1.png", width=480, height=480)
 with(DT,
      hist(Global_active_power, col="red",
-          xlab="Global Active Power (killowats)", main="Global Active Power",
+          xlab="Global Active Power (kilowatts)", main="Global Active Power",
           bty="n"))
 dev.off()
 

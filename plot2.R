@@ -24,6 +24,6 @@ DT[,datetime:= as.POSIXct(paste(Date, Time), format="%d/%m/%Y %H:%M:%S")]
 png("plot2.png", width=480, height=480)
 with(DT, {
      plot(datetime, Global_active_power, type="n",
-          xlab="", ylab="Global Active Power (killowatts)")
+          xlab="", ylab="Global Active Power (kilowatts)")
      lines(datetime, Global_active_power)})
 dev.off()
